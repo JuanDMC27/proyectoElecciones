@@ -1,6 +1,12 @@
 const loginForm = document.getElementById('login-form');
 const loginMessage = document.getElementById('login-message');
 
+/**
+ * Maneja el evento de envío del formulario de login.
+ * Valida las credenciales del usuario contra el archivo administrador.json.
+ * @param {Event} e - Evento de envío del formulario.
+ * @returns {void}
+ */
 loginForm.addEventListener('submit', function (e) {
   e.preventDefault();
 

@@ -23,6 +23,8 @@ const cerrarModal = document.getElementById('cerrar-modal');
 
 /**
  * Inicializa la aplicación cargando los candidatos y configurando los eventos de votación.
+ * @function
+ * @returns {void}
  */
 function initApp() {
   fetch(API_CANDIDATOS_URL)
@@ -60,6 +62,8 @@ function initApp() {
 
 /**
  * Confirma el voto y muestra el modal de agradecimiento.
+ * @function
+ * @returns {void}
  */
 function confirmarVoto() {
   votos[candidatoIndex]++;
@@ -70,6 +74,8 @@ function confirmarVoto() {
 
 /**
  * Cancela el voto y muestra el modal de cancelación.
+ * @function
+ * @returns {void}
  */
 function cancelarVoto() {
   modal.classList.add('hidden');
@@ -78,6 +84,8 @@ function cancelarVoto() {
 
 /**
  * Muestra el modal de cancelación de voto.
+ * @function
+ * @returns {void}
  */
 function mostrarModalCancelarVoto() {
   let cancelarVotoModal = document.getElementById('cancelar-voto-modal');
@@ -103,7 +111,9 @@ function mostrarModalCancelarVoto() {
 
 /**
  * Muestra el modal de resultados de votos.
+ * @function
  * @param {boolean} paraLogin - Si es true, redirige a login al cerrar el modal.
+ * @returns {void}
  */
 function mostrarResultadosVotos(paraLogin) {
   cerrarParaLogin = paraLogin;
