@@ -1,0 +1,222 @@
+body{
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+h1{
+    margin-top: 0;
+}
+.candidatos{
+    margin-bottom: 3px;
+}
+
+.card-container{
+    margin: 20px;
+    margin-top: 0;
+    margin-bottom: 5px;
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card{
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 250px;
+    transition: transform 0.2s;
+    align-items: center;
+}
+
+img{
+    border-radius: 10px;
+    width: 220px;
+    height: 220px;
+}
+.card:hover{
+    transform: scale(1.05);
+}
+
+.votar-btn{
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  animation: fadeIn 0.3s ease-in-out;
+  margin: 10% auto;
+  max-width: 500px;
+  position: relative;
+}
+
+.modal-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.modal-buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #28a745;
+}
+
+#confirm-btn, #confirmar-cerrar {
+  background-color: #28a745;
+  color: white;
+}
+
+#cancel-btn, #cancelar-cerrar {
+  background-color: #dc3545;
+  color: white;
+}
+
+#cerrar-btn{
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+#cerrar-btn:hover{
+    background-color: #c82333;
+    transform: scale(1.05);
+}
+
+#votos_btn{
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+#votos_btn:hover{
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+#cerrar-modal {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  color: red;
+}
+
+#votos-lista {
+  list-style: none;
+  padding-left: 0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .card-container {
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 10px;
+  }
+  .card {
+    width: 45vw;
+    min-width: 220px;
+    max-width: 320px;
+  }
+  img {
+    width: 90%;
+    height: auto;
+    max-width: 220px;
+    max-height: 220px;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 5px;
+  }
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 5px;
+  }
+  .card {
+    width: 95vw;
+    min-width: 0;
+    max-width: 98vw;
+    padding: 10px;
+  }
+  img {
+    width: 90vw;
+    max-width: 98vw;
+    height: auto;
+    max-height: 200px;
+  }
+  .modal-content {
+    width: 95vw;
+    max-width: 98vw;
+    padding: 10px;
+    font-size: 1rem;
+  }
+  #cerrar-btn, #votos_btn {
+    width: 90vw;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 400px) {
+  h1, h2, p {
+    font-size: 1rem;
+  }
+  .modal-content {
+    font-size: 0.95rem;
+    padding: 5px;
+  }
+  .modal-buttons button {
+    padding: 8px 10px;
+    font-size: 0.95rem;
+  }
+}

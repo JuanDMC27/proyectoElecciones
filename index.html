@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Elecciones</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <section>
+    <h1>Elecciones</h1>
+    <p>Bienvenido a la sección de Elecciones. Aquí podrás encontrar los candidatos y su información.</p>
+    <h2 class="candidatos">Candidatos</h2>
+    <section class="card-container" id="cards"></section>
+  </section>
+
+  <!-- modal confirmacion votos -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <p id="modal-text"></p>
+      <div class="modal-buttons">
+        <button id="confirm-btn">Confirmar voto</button>
+        <button id="cancel-btn">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- modal votos -->
+  <div id="votos-modal" class="modal hidden">
+    <div class="modal-content">
+      <span id="cerrar-modal">&times;</span>
+      <h2>Resultados de Votación</h2>
+      <ul id="votos-lista"></ul>
+    </div>
+  </div>
+
+  <!-- modal cerrar -->
+  <div id="cerrar-modal-confirm" class="modal hidden">
+    <div class="modal-content">
+      <p>¿Estás seguro de que deseas cerrar esta página?</p>
+      <div class="modal-buttons">
+        <button id="confirmar-cerrar">Sí</button>
+        <button id="cancelar-cerrar">No</button>
+      </div>
+    </div>
+  </div>
+  <!-- modal gracias por votar -->
+  <div id="gracias-modal" class="modal hidden">
+    <div class="modal-content">
+      <p id="gracias-text"></p>
+      <div class="modal-buttons">
+        <button id="gracias-ok-btn">OK</button>
+      </div>
+    </div>
+  </div>
+  
+  <button id="cerrar-btn">Cerrar Elecciones</button>
+  <button id="votos_btn">Total de Votos</button>
+  <script src="src/js/main.js"></script>
+</body>
+</html>
